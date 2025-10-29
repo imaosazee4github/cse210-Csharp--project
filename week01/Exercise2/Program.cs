@@ -9,28 +9,28 @@ class Program
         string gradePercentageInput = Console.ReadLine();
         int gradePercentage = int.Parse(gradePercentageInput);
 
-        string letterGrade = "";  //variable to store the letter grade.
+        string letter = "";  //variable to store the letter grade.
         string sign = "";
 
         if (gradePercentage >= 90)
         {
-            letterGrade = "A";
+            letter = "A";
         }
         else if (gradePercentage >= 80)
         {
-             letterGrade = "B";
+             letter = "B";
         }
         else if (gradePercentage >= 70)
         {
-            letterGrade = "C";
+            letter = "C";
         }
 
         else if (gradePercentage >= 60)
         {
-            letterGrade = "D";
+            letter = "D";
         }
         else {
-            letterGrade = "F";
+            letter = "F";
         }
 
 
@@ -47,17 +47,17 @@ class Program
 
         //Handle spacial cases like removing the A+ or F+ or F-
 
-        if (letterGrade == "A" && sign == "+")
+        if (letter == "A" && sign == "+")
         {
             sign = "";
         }
 
-        if(letterGrade == "F")
+        if(letter == "F")
         {
             sign = "";
         }
 
-        Console.WriteLine($"Your grade is: {letterGrade}{sign}");
+        Console.WriteLine($"Your grade is: {letter}{sign}");
 
 //check if student passed at least 70%
 
