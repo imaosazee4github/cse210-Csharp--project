@@ -30,7 +30,7 @@ class Program
             letter = "D";
         }
         else {
-            letter = "F";
+            letter = "F";X
         }
 
 
