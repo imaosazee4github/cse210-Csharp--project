@@ -38,7 +38,7 @@ public class Job{
 
     public void DisplayJobInfo()
     {
-        Console.WriteLine($"{_jobTitle} at ({_company}) from {_startYear} tp {_endYear}");
+        Console.WriteLine($"{_jobTitle}  ({_company})  {_startYear}  {_endYear}");
     }
 }
 
