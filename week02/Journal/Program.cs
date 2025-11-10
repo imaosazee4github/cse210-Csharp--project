@@ -1,75 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 
-//Entry Class
-class Entry{
-    public string _date;
-    public string _promptText;
-    public string _entryText;
-    public int _mood;
 
-    public void Display()
-    {
-        Console.WriteLine($"{_date} - Mood: {_mood}/10");
-        Console.WriteLine($"Prompt: {_promptText}");
-        Console.WriteLine(_entryText);
-        Console.WriteLine();
-    }
-}
 
-//Journal Class
 
-class Journal
-{
-    public List<Entry> _entries = new List<Entry>();
-
-    public void AddEntry(Entry entry)
-    {
-        _entries.Add(entry);
-    }
-
-    public void DisplayAll()
-    {
-        foreach (Entry entry in _entries)
-        {
-            entry.Display();
-        }
-    }
-
-    public void SaveToFile(string file)
-    {
-        using (StreamWriter output = new StreamWriter(file))
-        {
-            foreach (Entry entry in _entries)
-            {
-                output.WriteLine($"{entry._date}~|~{entry._promptText}~|~{entry._entryText}~|~{entry._mood}");
-                // output.WriteLine($"{entry._date}~|~{entry._promptText}~|~{entry._entryText}~|~{entry._mood}");
-            }
-        }
-    }
-
-    public void LoadFromFile(string file)
-    {
-        _entries.Clear();
-        string[] lines = File.ReadAllLines(file);
-
-        foreach (string line in lines)
-        {
-            string[] parts = line.Split("~|~");
-
-            Entry newEntry = new Entry();
-            newEntry._date = parts[0];
-            newEntry._promptText = parts[1];
-            newEntry._entryText = parts[2];
-            newEntry._mood = int.Parse(parts[3]);
-
-            _entries.Add(newEntry);
-        }
-    }
-}
-
-//Progra Class
+//Program Class
 
 class Program
 {
