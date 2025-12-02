@@ -4,6 +4,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Homework Project.");
+        Assignment assign1 = new Assignment("Osazee Imadonmwinyi", "Multiplication");
+        Console.WriteLine(assign1.GetSummary());
+
+        MathAssignment math = new MathAssignment(
+            "Word Problem",
+            "Fractions",
+            "7.3",
+            "3-10, 20-21"
+        );
+
+        Console.WriteLine(math.GetSummary());
+        Console.WriteLine(math.GetHomeworkList());
     }
 }
