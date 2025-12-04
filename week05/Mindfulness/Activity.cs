@@ -20,12 +20,6 @@ public class  Activity
 
     //-----set duration ------
     //Prompts the user and stores the chosen duration
-
-    // public void SetDuration()
-    // {
-    //     Console.Write("Enter duration (in seconds): ");
-    //     _durationSeconds = int.Parse(Console.ReadLine());
-    // }
     protected void SetDuration()
     {
         while (true)

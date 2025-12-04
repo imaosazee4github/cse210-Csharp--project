@@ -1,3 +1,10 @@
+// I added the following features to exceed the core rubric:
+//
+// Input Validation With Error Handling**
+//    The program now handles invalid menu selections and prevents
+//    crashing when the user enters invalid input.
+
+
 using System;
 
 class Program
